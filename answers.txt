@@ -1,1 +1,51 @@
 Please replace this text with ~50 lines of terminal history.
+db.bounties.find({name})
+db.bounties.find({name:{$exists}})
+db.bounties.findAll({name:})
+db.bounties.find({name:{$exists: true}})
+db.bounties.remove({ name: "Starbuck" })
+db.bounties.update({name: "Rocket"},{$set {ship: "The Milano 2"}})
+db.bounties.update({name: "Rocket"},{$set: {ship: "The Milano 2"}})
+db.bounties.remove({ "_id": ObjectId("5f4d65a790858cff92672efd")})
+db.bounties.update({name: "Sara Lance"}, {$set: {name: "White Canary"}})
+db.bounties.find({reward: {$gt 100000}})
+db.bounties.find({reward: {$gt: 100000}})
+db.bounties.find({reward: {$lt: 1000}})
+db.bounties.find({reward: {$lte: 1000}})
+history
+db.bounties.find({},{"name":1})
+db.bounties.find({hunter:"Nebula"})
+db.bounties.findOne({$where: {hunter : "Nebula"}})
+db.bounties.findOne( {hunter : "Nebula"})
+db.boounties.find({ hunters:["Nebula"]})
+db.bounties.find({ hunters:["Nebula"]})
+db.bounties.find({ $or:[{ ship: "Waverider"},{ship: "Serenity"}]})
+db.bounties.find({ client:{ "Ayesha High Priestess of the Sovereign"},{ captured: false}})
+db.bounties.find({ client:{ "Ayesha High Priestess of the Sovereign"},{ captured:{ false}}})
+db.bounties.find({ client: "Ayesha High Priestess of the Sovereign", captured: false})
+db.bounties.update({$inc{ reward: 333333}})
+db.bounties.update.all({$inc{ reward: 333333}})
+db.bounties.updateAll({$inc{ reward: 333333}})
+db.bounties.updateAll({$inc:{ reward: 333333}})
+db.bounties.update({$inc:{ reward: 333333}})
+db.bounties.update({ $mul: {reward: (2)}})
+db.bounties.update({ name: "Malcolm Reynolds"}, {$push{ hunters: "Bobba Fett"}})
+db.bounties.update({ name: "Malcolm Reynolds"}, {$push: { hunters: "Bobba Fett"}})
+db.bounties.update({ ship: "Waverider"}, {$push: { hunters: "Bobba Fett"}})
+db.bounties.update({ name:"Han solo"},{$pop: {hunters: 1} } )
+db.bounties.update({ name: "Han Solo"}, $inc: { lastSeen: "yesterday"}},{upsert:true}); db.bouties.find()
+db.bounties.update({ name: "Han Solo"}, $inc: { lastSeen: "yesterday"}},{upsert:true}); db.bounties.find()
+db.bounties.update({ name: "Han Solo"}, $inc: { lastSeen: "yesterday"},{upsert:true}); db.bounties.find()
+db.bounties.update({ name: "Han Solo"}, $inc: { lastSeen: "yesterday"},{upsert:true})
+db.bounties.update({ name: "Han Solo"}, $inc: { lastSeen: "last week"},{upsert:true}); db.bounties.find();
+tail -50 ~/.dbshell
+tail -50 /.dbshell
+tail -50 ~/.dbshell
+db.bounties.update({ name: "Han Solo"}, $set: { lastSeen: "yesterday"});
+db.bounties.update({ name: "Han Solo"},{ $set: { lastSeen: "yesterday"}});
+db.bounties.update({ !name: "Han Solo"},{ $set: { lastSeen: "last week"}});
+db.bounties.update({ name: {$not: "Han Solo" },{ $set : { lastSeen: "last week"}}})
+db.bounties.update({ name: {$not: "Han Solo" }},{ $set : { lastSeen: "last week"}})
+db.bounties.update({}, {$inc: {reward: 333333}}, {multi: true})
+db.bounties.update({}, {$mul: {bounties: 2}})
+db.bounties.update({}, {$set: {lastSeen: "last week"}}, {upsert: false})
